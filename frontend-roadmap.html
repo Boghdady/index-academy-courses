@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&family=Changa:wght@400;500;600;700&display=swap"
+            rel="stylesheet" />
+
+    <title>index academy</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&family=Changa:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Changa:wght@300;400;500;600;700;800&display=swap');
+
+        :root {
+            --primary-color: #E93249;
+            --secondary-color: #2E3D41;
+            --heading-color: #150507;
+            --text-color: #565656;
+            --dark-blue: #0C1040;
+            --border-radius: 12px
+        }
+
+        body,
+        html {
+            direction: rtl;
+            text-align: right;
+            background-color: #fffdfd;
+            font-family: 'Almarai', sans-serif !important;
+        }
+
+        .road-header {
+            width: 100%;
+            background: rgba(0, 137, 123, 1);
+            color: #fff;
+            margin-bottom: 32px;
+            padding: 48px 0;
+        }
+
+        .road-header-title {
+            font-family: 'Almarai', sans-serif !important;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px !important;
+            line-height: 40px;
+            margin-bottom: 18px;
+            margin-top: 48px;
+        }
+
+        @media (min-width: 440px) {
+            .road-header-title {
+                font-size: 30px !important;
+            }
+
+        }
+
+        .road-header-text {
+            font-family: 'Almarai', sans-serif !important;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 30px;
+            margin-bottom: 0;
+            max-width: 930px;
+        }
+
+        .step {
+            /*margin-bottom: 32px;*/
+            margin-bottom: 70px;
+        }
+
+        .step-title {
+            font-size: 24px;
+            line-height: 24px;
+            color: var(--secondary-color);
+            font-weight: 700;
+            margin-bottom: 16px;
+            font-family: 'Almarai', sans-serif !important;
+        }
+
+        .step-desc {
+            font-size: 16px;
+            line-height: 24px;
+            color: var(--secondary-color);
+            font-family: 'Almarai', sans-serif !important;
+            max-width: 930px;
+            margin-bottom: 24px;
+        }
+
+        .step-card {
+            width: 100%;
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.30);
+            border-radius: var(--border-radius);
+            padding: 12px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px
+        }
+
+        .step-card-title-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .step-card-title {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            color: var(--secondary-color);
+            font-family: 'Almarai', sans-serif !important;
+        }
+
+        .step-card-img-wrapper {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #E2E3E3;
+        }
+
+        .step-card-details {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+        }
+
+        .step-card-details-text {
+            margin: 0;
+            font-size: 12px;
+            font-family: 'Almarai', sans-serif !important;
+        }
+
+        .step-card-badge,
+        .step-card-badge--red {
+            background-color: #E0F7E0;
+            color: #00BA00;
+            font-size: 14px;
+            line-height: 20px;
+            font-family: 'Almarai', sans-serif !important;
+            height: 24px;
+            min-width: 53px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--border-radius);
+            padding: 0 12px;
+        }
+
+        .step-card-badge--red {
+            color: #E93249;
+            background-color: rgba(233, 50, 73, 0.12)
+        }
+
+        .dot {
+            height: 4px;
+            width: 4px;
+            background-color: var(--text-color);
+            border-radius: 50%;
+        }
+        .status-label {
+            border-radius: 12px;
+            padding: 2px 30px;
+            font-family: 'Almarai', sans-serif !important;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            justify-content: center;
+        }
+        .soon-status {
+            background: #e5e2e3;
+            color: #2e3d41;
+            font-size: 14px;
+        }
+        .pending-status {
+            background: #f5ebde;
+            color: #e7a001;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+
+<body>
+<section class="road-header">
+    <div class="container flex-column justify-content-center">
+        <h2 class="road-header-title">مسار ( Frontend Development )</h2>
+        <p class="road-header-text">
+            ان شاء الله خلال المسار ده هيتم عرض الكورسات اللي هيتم شرحها، الكورسات الموجودة بالمسار غير نهائية وقابلة للتعديل والتحديث
+        </p>
+    </div>
+</section>
+<section class="road-steps">
+    <div class="container w-100  flex-column justify-content-center">
+        <div class="step">
+            <h2 class="step-title">
+                المرحلة الأولى :
+            </h2>
+            <p class="step-desc">
+                هتتعلم خلال المرحلة الاولي ازاي الويب بيشتغل ولغات البرمجة اللي محتاج تكون متقنها
+            </p>
+
+            <div class="step-card">
+                <div class="step-card-title-wrapper">
+                    <div class="step-card-img-wrapper">
+                        <img src="https://res.cloudinary.com/dqxbeqflu/image/upload/v1685048564/roadmap%20icons/web_ge2pgm.svg"
+                             alt="مسار ( Backend Development )"height="30px"; style="width:30px; ">
+                    </div>
+
+                    <h3 class="step-card-title">
+                        كورس ( How Web Work )
+                    </h3>
+                </div>
+
+                <div class="step-card-details">
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="step-card-badge">
+                            مجاناً
+                        </div>
+                        <div class="step-card-badge">
+                            متاح
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <p class="step-card-details-text">
+                            <span class="fw-bold">26</span> درس
+                        </p>
+                        <div class="dot">
+
+                        </div>
+                        <p class="step-card-details-text"><span class="fw-bold">48</span> ساعة</p>
+                    </div>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-card-title-wrapper">
+                    <div class="step-card-img-wrapper">
+                        <img src="https://res.cloudinary.com/dqxbeqflu/image/upload/v1685105768/roadmap%20icons/javascript_i0smnp.svg"
+                             style="width: 30px; height: 30px"
+                             alt="مسار ( Backend Development )">
+                    </div>
+
+                    <h3 class="step-card-title">
+                        كورس ( Modern Javascript  )
+                    </h3>
+                </div>
+
+                <div class="step-card-details">
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="step-card-badge">
+                            مجاناً
+                        </div>
+                        <div class="step-card-badge">
+                            متاح
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <p class="step-card-details-text">
+                            <span class="fw-bold">26</span> درس
+                        </p>
+                        <div class="dot">
+
+                        </div>
+                        <p class="step-card-details-text"><span class="fw-bold">48</span> ساعة</p>
+                    </div>
+                </div>
+            </div>
+<!--            <div class="step-card">-->
+<!--                <div class="step-card-title-wrapper">-->
+<!--                    <div class="step-card-img-wrapper">-->
+<!--                        <img src="https://res.cloudinary.com/dqxbeqflu/image/upload/v1685105768/roadmap%20icons/javascript_i0smnp.svg"-->
+<!--                             style="width: 30px; height: 30px"-->
+<!--                             alt="مسار ( Backend Development )">-->
+<!--                    </div>-->
+
+<!--                    <h3 class="step-card-title">-->
+<!--                        كورس  ( Javascript Object Oriented )-->
+<!--                    </h3>-->
+<!--                </div>-->
+
+<!--                <div class="step-card-details">-->
+<!--                    <div class="d-flex align-items-center gap-2">-->
+<!--                        <div class="status-label soon-status">-->
+<!--                            <svg width="1em" height="1em" viewBox="0 0 10 12" fill="none"-->
+<!--                                 xmlns="http://www.w3.org/2000/svg">-->
+<!--                                <path fill-rule="evenodd" clip-rule="evenodd"-->
+<!--                                      d="M10 11.6128C10 11.8257 9.82 11.9999 9.59999 11.9999V12H8.79997H1.2H0.40001C0.180003 12 0 11.8258 0 11.6129C0 11.4 0.180003 11.2258 0.40001 11.2258H1.2V8.96127C1.2 8.56643 1.376 8.19096 1.68601 7.9316L3.462 6.44323C3.598 6.33095 3.67201 6.17226 3.67201 6C3.67201 5.82774 3.596 5.66905 3.462 5.55677L1.68601 4.06647C1.376 3.80904 1.2 3.43357 1.2 3.03873V0.774212H0.40001C0.180003 0.774212 0 0.600016 0 0.387106C0 0.174196 0.180003 0 0.40001 0H1.2H8.8H9.59999C9.81997 0 10 0.174134 10 0.387043C10 0.599953 9.82 0.774149 9.59999 0.774149H8.8V2.84897C8.8 3.24187 8.62603 3.61541 8.32001 3.87284L6.32802 5.55864C6.19605 5.67092 6.12204 5.82768 6.12204 5.99994C6.12204 6.1722 6.19402 6.32896 6.32802 6.44123L8.32001 8.12704C8.624 8.38447 8.8 8.758 8.8 9.15091V11.2257H9.59999C9.82 11.2257 10 11.3999 10 11.6128ZM1.99999 11.2258H7.99998L7.99995 9.15094C7.99995 8.98255 7.92597 8.82192 7.79396 8.70965L5.79997 7.02384C5.49599 6.76641 5.31999 6.39288 5.31999 5.99997C5.31999 5.60706 5.49596 5.23352 5.79997 4.9761L7.79197 3.29029C7.92397 3.17802 7.99998 3.01739 7.99998 2.849V0.77418H1.99999V3.0387C1.99999 3.20903 2.076 3.37159 2.208 3.48386L3.98399 4.97416C4.29399 5.23159 4.47 5.60706 4.47 6.0019C4.47 6.39675 4.292 6.77028 3.98399 7.02964L2.208 8.51801C2.076 8.63029 1.99999 8.79091 1.99999 8.96124V11.2258ZM5.01598 6.53032C5.11201 6.78968 5.28798 7.0142 5.50199 7.19613L7.46201 8.85483C7.55001 8.93032 7.60001 9.03676 7.60001 9.15097V10.6665C7.60001 10.7613 7.52 10.8387 7.42201 10.8387H2.57801C2.48001 10.8387 2.4 10.7613 2.4 10.6665V8.9613C2.4 8.84709 2.452 8.74066 2.54 8.66516L4.31599 7.17486C4.66 6.88452 4.85799 6.4684 4.86599 6.02711V6H4.92398V6.02904C4.92798 6.1955 4.95399 6.36387 5.01598 6.53032Z"-->
+<!--                                      fill="currentColor" />-->
+<!--                            </svg>-->
+<!--                            قريبا-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+
+<!--                    <div class="d-flex align-items-center gap-2">-->
+<!--                        <p class="step-card-details-text">-->
+<!--                            <span class="fw-bold">&#45;&#45;</span> درس-->
+<!--                        </p>-->
+<!--                        <div class="dot">-->
+
+<!--                        </div>-->
+<!--                        <p class="step-card-details-text"><span class="fw-bold">&#45;&#45;</span> ساعة</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+            <div class="step-card">
+                <div class="step-card-title-wrapper">
+                    <div class="step-card-img-wrapper">
+                        <img src="https://res.cloudinary.com/dqxbeqflu/image/upload/v1685105768/roadmap%20icons/javascript_i0smnp.svg"
+                             style="width: 30px; height: 30px"
+                             alt="مسار ( Backend Development )">
+                    </div>
+
+                    <h3 class="step-card-title">
+                        كورس ( Advanced Concepts Javascript )
+                    </h3>
+                </div>
+
+                <div class="step-card-details">
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="status-label soon-status">
+                            <svg width="1em" height="1em" viewBox="0 0 10 12" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M10 11.6128C10 11.8257 9.82 11.9999 9.59999 11.9999V12H8.79997H1.2H0.40001C0.180003 12 0 11.8258 0 11.6129C0 11.4 0.180003 11.2258 0.40001 11.2258H1.2V8.96127C1.2 8.56643 1.376 8.19096 1.68601 7.9316L3.462 6.44323C3.598 6.33095 3.67201 6.17226 3.67201 6C3.67201 5.82774 3.596 5.66905 3.462 5.55677L1.68601 4.06647C1.376 3.80904 1.2 3.43357 1.2 3.03873V0.774212H0.40001C0.180003 0.774212 0 0.600016 0 0.387106C0 0.174196 0.180003 0 0.40001 0H1.2H8.8H9.59999C9.81997 0 10 0.174134 10 0.387043C10 0.599953 9.82 0.774149 9.59999 0.774149H8.8V2.84897C8.8 3.24187 8.62603 3.61541 8.32001 3.87284L6.32802 5.55864C6.19605 5.67092 6.12204 5.82768 6.12204 5.99994C6.12204 6.1722 6.19402 6.32896 6.32802 6.44123L8.32001 8.12704C8.624 8.38447 8.8 8.758 8.8 9.15091V11.2257H9.59999C9.82 11.2257 10 11.3999 10 11.6128ZM1.99999 11.2258H7.99998L7.99995 9.15094C7.99995 8.98255 7.92597 8.82192 7.79396 8.70965L5.79997 7.02384C5.49599 6.76641 5.31999 6.39288 5.31999 5.99997C5.31999 5.60706 5.49596 5.23352 5.79997 4.9761L7.79197 3.29029C7.92397 3.17802 7.99998 3.01739 7.99998 2.849V0.77418H1.99999V3.0387C1.99999 3.20903 2.076 3.37159 2.208 3.48386L3.98399 4.97416C4.29399 5.23159 4.47 5.60706 4.47 6.0019C4.47 6.39675 4.292 6.77028 3.98399 7.02964L2.208 8.51801C2.076 8.63029 1.99999 8.79091 1.99999 8.96124V11.2258ZM5.01598 6.53032C5.11201 6.78968 5.28798 7.0142 5.50199 7.19613L7.46201 8.85483C7.55001 8.93032 7.60001 9.03676 7.60001 9.15097V10.6665C7.60001 10.7613 7.52 10.8387 7.42201 10.8387H2.57801C2.48001 10.8387 2.4 10.7613 2.4 10.6665V8.9613C2.4 8.84709 2.452 8.74066 2.54 8.66516L4.31599 7.17486C4.66 6.88452 4.85799 6.4684 4.86599 6.02711V6H4.92398V6.02904C4.92798 6.1955 4.95399 6.36387 5.01598 6.53032Z"
+                                      fill="currentColor" />
+                            </svg>
+                            قريبا
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <p class="step-card-details-text">
+                            <span class="fw-bold">--</span> درس
+                        </p>
+                        <div class="dot">
+
+                        </div>
+                        <p class="step-card-details-text"><span class="fw-bold">--</span> ساعة</p>
+                    </div>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-card-title-wrapper">
+                    <div class="step-card-img-wrapper">
+                        <img src="https://res.cloudinary.com/dqxbeqflu/image/upload/v1685102473/roadmap%20icons/typescript_m7svgy.png"
+                             style="width:30px; height:30px;"
+                             alt="مسار ( Backend Development )">
+                    </div>
+
+                    <h3 class="step-card-title">
+                        كورس ( Learn Typescript in Details )
+                    </h3>
+                </div>
+
+                <div class="step-card-details">
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="step-card-badge">
+                            مجاناً
+                        </div>
+                        <div class="step-card-badge">
+                            متاح
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <p class="step-card-details-text">
+                            <span class="fw-bold">26</span> درس
+                        </p>
+                        <div class="dot">
+
+                        </div>
+                        <p class="step-card-details-text"><span class="fw-bold">48</span> ساعة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="step">
+            <h2 class="step-title">
+                المرحلة الثانية : </h2>
+            <p class="step-desc">
+                خلال المرحلة دي هتتعلم ازاي تقدر تتعامل علي نظام التشغيل خاصة نظام لينيكس، وهتتعلم اساسيات ال (Version Control) واساسيات (Node.js)
+            </p>
+
+            <div class="step-card">
+                <div class="step-card-title-wrapper">
+                    <div class="step-card-img-wrapper">
+                        <img src="https://res.cloudinary.com/dqxbeqflu/image/upload/v1685048153/roadmap%20icons/linux_xx1lyj.svg"
+                             style="width:30px; height:30px"
+                             alt="مسار ( Backend Development )">
+                    </div>
+
+                    <h3 class="step-card-title">
+                        كورس ( Linux Fundamental )
+                    </h3>
+                </div>
+
+                <div class="step-card-details">
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="status-label soon-status">
+                            <svg width="1em" height="1em" viewBox="0 0 10 12" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M10 11.6128C10 11.8257 9.82 11.9999 9.59999 11.9999V12H8.79997H1.2H0.40001C0.180003 12 0 11.8258 0 11.6129C0 11.4 0.180003 11.2258 0.40001 11.2258H1.2V8.96127C1.2 8.56643 1.376 8.19096 1.68601 7.9316L3.462 6.44323C3.598 6.33095 3.67201 6.17226 3.67201 6C3.67201 5.82774 3.596 5.66905 3.462 5.55677L1.68601 4.06647C1.376 3.80904 1.2 3.43357 1.2 3.03873V0.774212H0.40001C0.180003 0.774212 0 0.600016 0 0.387106C0 0.174196 0.180003 0 0.40001 0H1.2H8.8H9.59999C9.81997 0 10 0.174134 10 0.387043C10 0.599953 9.82 0.774149 9.59999 0.774149H8.8V2.84897C8.8 3.24187 8.62603 3.61541 8.32001 3.87284L6.32802 5.55864C6.19605 5.67092 6.12204 5.82768 6.12204 5.99994C6.12204 6.1722 6.19402 6.32896 6.32802 6.44123L8.32001 8.12704C8.624 8.38447 8.8 8.758 8.8 9.15091V11.2257H9.59999C9.82 11.2257 10 11.3999 10 11.6128ZM1.99999 11.2258H7.99998L7.99995 9.15094C7.99995 8.98255 7.92597 8.82192 7.79396 8.70965L5.79997 7.02384C5.49599 6.76641 5.31999 6.39288 5.31999 5.99997C5.31999 5.60706 5.49596 5.23352 5.79997 4.9761L7.79197 3.29029C7.92397 3.17802 7.99998 3.01739 7.99998 2.849V0.77418H1.99999V3.0387C1.99999 3.20903 2.076 3.37159 2.208 3.48386L3.98399 4.97416C4.29399 5.23159 4.47 5.60706 4.47 6.0019C4.47 6.39675 4.292 6.77028 3.98399 7.02964L2.208 8.51801C2.076 8.63029 1.99999 8.79091 1.99999 8.96124V11.2258ZM5.01598 6.53032C5.11201 6.78968 5.28798 7.0142 5.50199 7.19613L7.46201 8.85483C7.55001 8.93032 7.60001 9.03676 7.60001 9.15097V10.6665C7.60001 10.7613 7.52 10.8387 7.42201 10.8387H2.57801C2.48001 10.8387 2.4 10.7613 2.4 10.6665V8.9613C2.4 8.84709 2.452 8.74066 2.54 8.66516L4.31599 7.17486C4.66 6.88452 4.85799 6.4684 4.86599 6.02711V6H4.92398V6.02904C4.92798 6.1955 4.95399 6.36387 5.01598 6.53032Z"
+                                      fill="currentColor" />
+                            </svg>
+                            قريبا
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <p class="step-card-details-text">
+                            <span class="fw-bold">--</span> درس
+                        </p>
+                        <div class="dot">
+
+                        </div>
+                        <p class="step-card-details-text"><span class="fw-bold">--</span> ساعة</p>
+                    </div>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-card-title-wrapper">
+                    <div class="step-card-img-wrapper">
+                        <img src="https://res.cloudinary.com/dqxbeqflu/image/upload/v1685048563/roadmap%20icons/git_tvuh1s.svg"
+                             style="width:30px; height: 30px;"
+                             alt="مسار ( Backend Development )">
+                    </div>
+
+                    <h3 class="step-card-title">
+                        كورس ( Version Control System )
+                    </h3>
+                </div>
+
+                <div class="step-card-details">
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="status-label soon-status">
+                            <svg width="1em" height="1em" viewBox="0 0 10 12" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M10 11.6128C10 11.8257 9.82 11.9999 9.59999 11.9999V12H8.79997H1.2H0.40001C0.180003 12 0 11.8258 0 11.6129C0 11.4 0.180003 11.2258 0.40001 11.2258H1.2V8.96127C1.2 8.56643 1.376 8.19096 1.68601 7.9316L3.462 6.44323C3.598 6.33095 3.67201 6.17226 3.67201 6C3.67201 5.82774 3.596 5.66905 3.462 5.55677L1.68601 4.06647C1.376 3.80904 1.2 3.43357 1.2 3.03873V0.774212H0.40001C0.180003 0.774212 0 0.600016 0 0.387106C0 0.174196 0.180003 0 0.40001 0H1.2H8.8H9.59999C9.81997 0 10 0.174134 10 0.387043C10 0.599953 9.82 0.774149 9.59999 0.774149H8.8V2.84897C8.8 3.24187 8.62603 3.61541 8.32001 3.87284L6.32802 5.55864C6.19605 5.67092 6.12204 5.82768 6.12204 5.99994C6.12204 6.1722 6.19402 6.32896 6.32802 6.44123L8.32001 8.12704C8.624 8.38447 8.8 8.758 8.8 9.15091V11.2257H9.59999C9.82 11.2257 10 11.3999 10 11.6128ZM1.99999 11.2258H7.99998L7.99995 9.15094C7.99995 8.98255 7.92597 8.82192 7.79396 8.70965L5.79997 7.02384C5.49599 6.76641 5.31999 6.39288 5.31999 5.99997C5.31999 5.60706 5.49596 5.23352 5.79997 4.9761L7.79197 3.29029C7.92397 3.17802 7.99998 3.01739 7.99998 2.849V0.77418H1.99999V3.0387C1.99999 3.20903 2.076 3.37159 2.208 3.48386L3.98399 4.97416C4.29399 5.23159 4.47 5.60706 4.47 6.0019C4.47 6.39675 4.292 6.77028 3.98399 7.02964L2.208 8.51801C2.076 8.63029 1.99999 8.79091 1.99999 8.96124V11.2258ZM5.01598 6.53032C5.11201 6.78968 5.28798 7.0142 5.50199 7.19613L7.46201 8.85483C7.55001 8.93032 7.60001 9.03676 7.60001 9.15097V10.6665C7.60001 10.7613 7.52 10.8387 7.42201 10.8387H2.57801C2.48001 10.8387 2.4 10.7613 2.4 10.6665V8.9613C2.4 8.84709 2.452 8.74066 2.54 8.66516L4.31599 7.17486C4.66 6.88452 4.85799 6.4684 4.86599 6.02711V6H4.92398V6.02904C4.92798 6.1955 4.95399 6.36387 5.01598 6.53032Z"
+                                      fill="currentColor" />
+                            </svg>
+                            قريبا
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <p class="step-card-details-text">
+                            <span class="fw-bold">--</span> درس
+                        </p>
+                        <div class="dot">
+
+                        </div>
+                        <p class="step-card-details-text"><span class="fw-bold">--</span> ساعة</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

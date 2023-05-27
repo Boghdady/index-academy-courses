@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script> -->
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+            crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&family=Changa:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+    />
+
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&family=Changa:wght@400;500;600;700&display=swap');
+
+        :root {
+            --heading-color: #150507;
+            --text-color: #565656;
+            --dark-blue: #0c1040;
+        }
+
+        body,
+        html {
+            direction: rtl;
+            text-align: right;
+            background-color: #fffdfd;
+            font-family: 'Almarai', sans-serif !important;
+            background: url('https://res.cloudinary.com/dszwwo7hg/image/upload/v1683555366/index-academy/background-img_iopnuf.png')
+            #fff;
+        }
+        @media(min-width:1400px) {
+            .container {
+                max-width: 1120px !important;
+            }
+        }
+
+        @media(min-width:1441px) {
+            .container {
+                max-width: 1320px !important;
+            }
+        }
+
+
+        .font {
+            font-family: 'Almarai', sans-serif !important;
+        }
+
+        [dir='ltr'] body {
+            text-align: left;
+            direction: ltr;
+        }
+
+        .available {
+            /* padding: 73px; */
+            width: 100%;
+            background-color: #fce6e9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 0;
+        }
+
+        .title {
+            font-family: 'Almarai', sans-serif !important;
+            font-size: 26px !important;
+            line-height: 56px !important;
+            color: var(--heading-color) !important;
+            font-weight: bold !important;
+            text-align: center !important;
+            display: flex;
+            flex-direction: column !important;
+            align-items: start !important;
+        }
+
+        .subtitle {
+            font-family: 'Almarai', sans-serif !important;
+            font-size: 20px;
+            margin-bottom: 24px;
+            color: var(--text-color);
+        }
+
+        .title-underline {
+            transform: translateY(-11px);
+        }
+
+        .card {
+            padding: 12px !important;
+            border-radius: 12px !important;
+            display: flex !important;
+            margin-bottom: 24px;
+        }
+
+        .card-img-container {
+            border-radius: 12px !important;
+            width: 100%;
+            flex: 3;
+        }
+
+        /* .card-img-top{
+        height: 100%;
+    } */
+
+        .card-body {
+            padding: 0 !important;
+            padding-top: 12px !important;
+            flex: 1 !important;
+        }
+
+        .card-title {
+            font-family: 'Changa', sans-serif !important;
+            margin-bottom: 12px !important;
+            text-align: right;
+            font-size: 16 px;
+            line-height: 20px;
+        }
+
+        .card-text {
+            font-size: 12px !important;
+            line-height: 24px !important;
+            color: var(--text-color) !important;
+            margin-bottom: 12px !important;
+            font-family: 'Almarai', sans-serif !important;
+        }
+
+        .card-courses {
+            font-size: 14px;
+            color: var(--text-color) !important;
+            font-family: 'Changa', sans-serif !important;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-self: center;
+            gap: 4px;
+        }
+
+        .card-soon {
+            font-size: 14px;
+            color: var(--text-color) !important;
+            font-family: 'Changa', sans-serif !important;
+            background-color: #e5e2e3;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            height: 24px;
+            gap: 4px;
+            margin-bottom: 8px;
+        }
+
+        .card-price {
+            color: var(--dark-blue);
+            font-family: 'Changa', sans-serif !important;
+            font-weight: bold;
+            height: 24px;
+            font-size: 18px;
+
+        }
+        .course-card {
+            transition: all .5s;
+            cursor: pointer;
+        }
+
+        .course-card:hover,
+        .course-card:focus {
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .15);
+            transform: scale3d(1.006, 1.006, 1);
+        }
+
+        .card-price span {
+            color: var(--text-color);
+            margin-inline-start: 4px;
+            text-decoration: line-through;
+        }
+        .padding-x-space {
+            padding: 0 60px !important;
+        }
+
+        @media (min-width: 736px) {
+            .padding-x-space {
+                padding: 0 12px !important;
+            }
+        }
+
+        @media (max-width: 455px) {
+            .padding-x-space {
+                padding: 0 16px !important;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .available {
+                width: 100%;
+                min-height: 930px;
+                background-color: #fce6e9;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                clip-path: url(#myCurve);
+            }
+        }
+    </style>
+</head>
+
+<body class="font">
+<section id="available" class="available">
+    <svg width="0" height="0">
+        <defs>
+            <clipPath id="myCurve" clipPathUnits="objectBoundingBox">
+                <path
+                        d="M 0,1
+											L 0,0
+											C .5 .25, .5 .25, 1,0
+											L 1,1
+											C .65 .8, .35 .8, 0 1
+											Z"
+                />
+            </clipPath>
+        </defs>
+    </svg>
+
+    <div
+            class="wrapper container d-flex flex-column align-items-center"
+    >
+        <h2 class="title">
+            الباقات التدريبية
+
+            <img
+                    class="title-underline"
+                    src="https://res.cloudinary.com/dszwwo7hg/image/upload/v1683194082/index-academy/title-undelrine_jfiqa5.svg"
+                    alt=""
+            />
+        </h2>
+        <p class="subtitle text-center">
+            إكتشف الدورات التدريبية المجمعة في باقات متعددة
+        </p>
+
+        <div class="row w-100">
+            <div class="col-12 col-md-6 col-lg-3 padding-x-space">
+                <div class="card course-card ">
+                    <div class="card-img-container">
+                        <img
+                                class="card-img-top"
+                                src="https://res.cloudinary.com/dszwwo7hg/image/upload/v1683201328/index-academy/back-end-cover_dgdjq0.svg"
+                                alt="Back-End Development"
+                        />
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">باقة  ( Back-end Development ) </h5>
+                        <div class="card-courses">
+                            <svg
+                                    width="16"
+                                    height="18"
+                                    viewBox="0 0 16 18"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                        d="M15.2366 16.5H2.35875C1.94181 16.5 1.52672 16.1728 1.52672 15.6825C1.52672 15.225 1.90075 14.8575 2.35875 14.8575H15.2366C15.6673 14.8575 16 14.5034 16 14.1075C16 14.0161 15.9924 1.95133 15.9924 1.85999C15.9924 0.832489 15.145 0 14.0992 0C10.9925 0 5.26461 0 2.35875 0C1.09527 0 0 1.01606 0 2.31752V15.6825C0 17.0018 1.09511 18 2.35875 18H15.2366C15.6565 18 16 17.6625 16 17.25C16 16.8375 15.6565 16.5 15.2366 16.5ZM1.52672 2.31752C1.52672 1.875 1.9084 1.5 2.35875 1.5H3.06107V13.3575C2.581 13.387 2.17722 13.2774 1.52672 13.5075V2.31752ZM7.03054 6.05251C7.03054 5.65498 7.2519 5.28749 7.60306 5.09999C7.95418 4.90498 8.3893 4.92 8.73282 5.13748L10.916 6.5175C11.2366 6.71251 11.4274 7.05748 11.4274 7.43248C11.4274 7.80002 11.2366 8.14499 10.916 8.34L8.73282 9.72002C8.40993 9.93148 7.97028 9.95432 7.60306 9.75751C7.2519 9.57001 7.03054 9.20251 7.03054 8.80499V6.05251Z"
+                                        fill="#565656"
+                                />
+                            </svg>
+                            6 دورات
+                        </div>
+                        <p class="card-text">
+                            الحصول على جميع الكورسات مدى الحياة ، إشترك
+                            الآن وأبدأ مسارك في مجال Back - End
+                        </p>
+                        <div class="card-price">
+                            مدى الحياة/ 10$
+                            <span>14$</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 padding-x-space">
+                <div class="card course-card ">
+                    <div class="card-img-container">
+                        <img
+                                class="card-img-top"
+                                src="https://res.cloudinary.com/dszwwo7hg/image/upload/v1683201330/index-academy/front-end-cover_rshrqm.svg"
+                                alt="Front-End Development"
+                        />
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            باقة  ( Front-end Development )
+                        </h5>
+                        <div class="card-courses">
+                            <svg
+                                    width="16"
+                                    height="18"
+                                    viewBox="0 0 16 18"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                        d="M15.2366 16.5H2.35875C1.94181 16.5 1.52672 16.1728 1.52672 15.6825C1.52672 15.225 1.90075 14.8575 2.35875 14.8575H15.2366C15.6673 14.8575 16 14.5034 16 14.1075C16 14.0161 15.9924 1.95133 15.9924 1.85999C15.9924 0.832489 15.145 0 14.0992 0C10.9925 0 5.26461 0 2.35875 0C1.09527 0 0 1.01606 0 2.31752V15.6825C0 17.0018 1.09511 18 2.35875 18H15.2366C15.6565 18 16 17.6625 16 17.25C16 16.8375 15.6565 16.5 15.2366 16.5ZM1.52672 2.31752C1.52672 1.875 1.9084 1.5 2.35875 1.5H3.06107V13.3575C2.581 13.387 2.17722 13.2774 1.52672 13.5075V2.31752ZM7.03054 6.05251C7.03054 5.65498 7.2519 5.28749 7.60306 5.09999C7.95418 4.90498 8.3893 4.92 8.73282 5.13748L10.916 6.5175C11.2366 6.71251 11.4274 7.05748 11.4274 7.43248C11.4274 7.80002 11.2366 8.14499 10.916 8.34L8.73282 9.72002C8.40993 9.93148 7.97028 9.95432 7.60306 9.75751C7.2519 9.57001 7.03054 9.20251 7.03054 8.80499V6.05251Z"
+                                        fill="#565656"
+                                />
+                            </svg>
+                            6 دورات
+                        </div>
+                        <p class="card-text">
+                            الحصول على جميع الكورسات مدى الحياة ، إشترك
+                            الآن وأبدأ مسارك في مجال Back - End
+                        </p>
+                        <div class="card-price">
+                            مدى الحياة/ 10$
+                            <span>14$</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 padding-x-space">
+                <div class="card course-card ">
+                    <div class="card-img-container">
+                        <img
+                                class="card-img-top"
+                                src="https://res.cloudinary.com/dszwwo7hg/image/upload/v1683201331/index-academy/desktop-cover_hf5b6f.svg"
+                                alt="Desktop Development"
+                        />
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">باقة ( Desktop Development )</h5>
+                        <div class="card-courses">
+                            <svg
+                                    width="16"
+                                    height="18"
+                                    viewBox="0 0 16 18"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                        d="M15.2366 16.5H2.35875C1.94181 16.5 1.52672 16.1728 1.52672 15.6825C1.52672 15.225 1.90075 14.8575 2.35875 14.8575H15.2366C15.6673 14.8575 16 14.5034 16 14.1075C16 14.0161 15.9924 1.95133 15.9924 1.85999C15.9924 0.832489 15.145 0 14.0992 0C10.9925 0 5.26461 0 2.35875 0C1.09527 0 0 1.01606 0 2.31752V15.6825C0 17.0018 1.09511 18 2.35875 18H15.2366C15.6565 18 16 17.6625 16 17.25C16 16.8375 15.6565 16.5 15.2366 16.5ZM1.52672 2.31752C1.52672 1.875 1.9084 1.5 2.35875 1.5H3.06107V13.3575C2.581 13.387 2.17722 13.2774 1.52672 13.5075V2.31752ZM7.03054 6.05251C7.03054 5.65498 7.2519 5.28749 7.60306 5.09999C7.95418 4.90498 8.3893 4.92 8.73282 5.13748L10.916 6.5175C11.2366 6.71251 11.4274 7.05748 11.4274 7.43248C11.4274 7.80002 11.2366 8.14499 10.916 8.34L8.73282 9.72002C8.40993 9.93148 7.97028 9.95432 7.60306 9.75751C7.2519 9.57001 7.03054 9.20251 7.03054 8.80499V6.05251Z"
+                                        fill="#565656"
+                                />
+                            </svg>
+                            6 دورات
+                        </div>
+                        <p class="card-text">
+                            الحصول على جميع الكورسات مدى الحياة ، إشترك
+                            الآن وأبدأ مسارك في مجال Back - End
+                        </p>
+                        <div class="card-price">
+                            مدى الحياة/ 10$
+                            <span>14$</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 padding-x-space">
+                <div class="card course-card">
+                    <div class="card-img-container">
+                        <img
+                                class="card-img-top"
+                                src="https://res.cloudinary.com/dszwwo7hg/image/upload/v1683201329/index-academy/mobile-cover_rq4r40.svg"
+                                alt="Desktop Development"
+                        />
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            باقة ( Mobile Development )
+                        </h5>
+                        <div class="card-soon">
+                            <svg
+                                    width="10"
+                                    height="12"
+                                    viewBox="0 0 10 12"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M10 11.6128C10 11.8257 9.82 11.9999 9.59999 11.9999V12H8.79997H1.2H0.40001C0.180003 12 0 11.8258 0 11.6129C0 11.4 0.180003 11.2258 0.40001 11.2258H1.2V8.96127C1.2 8.56643 1.376 8.19096 1.68601 7.9316L3.462 6.44323C3.598 6.33095 3.67201 6.17226 3.67201 6C3.67201 5.82774 3.596 5.66905 3.462 5.55677L1.68601 4.06647C1.376 3.80904 1.2 3.43357 1.2 3.03873V0.774212H0.40001C0.180003 0.774212 0 0.600016 0 0.387106C0 0.174196 0.180003 0 0.40001 0H1.2H8.8H9.59999C9.81997 0 10 0.174134 10 0.387043C10 0.599953 9.82 0.774149 9.59999 0.774149H8.8V2.84897C8.8 3.24187 8.62603 3.61541 8.32001 3.87284L6.32802 5.55864C6.19605 5.67092 6.12204 5.82768 6.12204 5.99994C6.12204 6.1722 6.19402 6.32896 6.32802 6.44123L8.32001 8.12704C8.624 8.38447 8.8 8.758 8.8 9.15091V11.2257H9.59999C9.82 11.2257 10 11.3999 10 11.6128ZM1.99999 11.2258H7.99998L7.99995 9.15094C7.99995 8.98255 7.92597 8.82192 7.79396 8.70965L5.79997 7.02384C5.49599 6.76641 5.31999 6.39288 5.31999 5.99997C5.31999 5.60706 5.49596 5.23352 5.79997 4.9761L7.79197 3.29029C7.92397 3.17802 7.99998 3.01739 7.99998 2.849V0.77418H1.99999V3.0387C1.99999 3.20903 2.076 3.37159 2.208 3.48386L3.98399 4.97416C4.29399 5.23159 4.47 5.60706 4.47 6.0019C4.47 6.39675 4.292 6.77028 3.98399 7.02964L2.208 8.51801C2.076 8.63029 1.99999 8.79091 1.99999 8.96124V11.2258ZM5.01632 6.53022C5.11235 6.78958 5.28833 7.01409 5.50234 7.19602L7.46235 8.85472C7.55036 8.93022 7.60035 9.03666 7.60035 9.15086V10.6663C7.60035 10.7612 7.52035 10.8386 7.42235 10.8386H2.57835C2.48036 10.8386 2.40035 10.7612 2.40035 10.6663V8.96119C2.40035 8.84699 2.45234 8.74055 2.54035 8.66506L4.31633 7.17475C4.66035 6.88441 4.85834 6.46829 4.86633 6.027V5.99989H4.92432V6.02894C4.92832 6.19539 4.95434 6.36376 5.01632 6.53022Z"
+                                        fill="#2E3D41"
+                                />
+                            </svg>
+
+                            قريباً
+                        </div>
+                        <p class="card-text">
+                            الحصول على جميع الكورسات مدى الحياة ، إشترك
+                            الآن وأبدأ مسارك في مجال Back - End
+                        </p>
+                        <div class="card-price"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"
+></script>
+</body>
+</html>
