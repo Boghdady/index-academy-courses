@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&family=Changa:wght@400;500;600;700&display=swap"
+            rel="stylesheet" />
+
+    <title>index academy</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&family=Changa:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Changa:wght@300;400;500;600;700;800&display=swap');
+
+        body,
+        html {
+            direction: rtl;
+            text-align: right;
+            background-color: #fffdfd;
+            font-family: 'Almarai', sans-serif !important;
+        }
+        @media(min-width:1400px) {
+            .container {
+                max-width: 1120px !important;
+            }
+        }
+
+        @media(min-width:1441px) {
+            .container {
+                max-width: 1320px !important;
+            }
+        }
+
+        .track-header {
+            width: 100%;
+            background: #2e3d41;
+            color: #fff;
+            padding: 92px 0 40px;
+            margin-bottom: 32px;
+        }
+
+        .track-header-title {
+            font-family: 'Almarai', sans-serif !important;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 40px;
+            margin-bottom: 16px;
+        }
+
+        .track-header-text {
+            font-family: 'Almarai', sans-serif !important;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+            margin-bottom: 16px;
+            max-width: 740px;
+        }
+
+        .btn-offer {
+            font-family: 'Almarai', sans-serif !important;
+            background: #e93249;
+            color: #fff;
+            padding: 12px 60px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 16px;
+            outline: none;
+            border: none;
+        }
+
+        .btn-offer:hover {
+            color: #e93249;
+            background: #fff;
+        }
+
+        .price {
+            font-family: 'Almarai', sans-serif !important;
+            font-size: 35px;
+            font-weight: 700;
+        }
+
+        .offer-text {
+            font-family: 'Almarai', sans-serif !important;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .old-price {
+            font-family: 'Almarai', sans-serif !important;
+            text-decoration-line: line-through;
+            font-weight: 400;
+            font-size: 25px;
+            text-decoration: underline;
+            text-underline-offset: -40%;
+            /* <-- this */
+            text-decoration-skip-ink: none;
+        }
+
+        .circle {
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin: 0 16px;
+        }
+
+        .icon-desc {
+            margin-inline-start: 8px;
+            font-family: 'Almarai', sans-serif !important;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 50px;
+        }
+        .details svg{
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="track-header">
+    <div class="container flex-column justify-content-center">
+        <h2 class="track-header-title">
+            باقة ( Back-end Development )
+        </h2>
+        <div
+                class="d-flex align-items-start align-items-lg-center justify-content-start justify-content-lg-between w-100 flex-column flex-lg-row">
+            <div>
+                <p class="track-header-text">
+                    عند إشتراكك في هذه الباقة ستحصل على هذه الكورسات مدى
+                      الحياة وبدون أي رسوم إضافية عند تحديث الكورسات التي حصلت عليها
+                </p>
+
+                <div class="d-flex align-items-center">
+                    <div class="details">
+                        <svg width="1.2em" height="1.2em" viewBox="0 0 16 18" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                    d="M15.2366 16.5H2.35875C1.94181 16.5 1.52672 16.1728 1.52672 15.6825C1.52672 15.225 1.90075 14.8575 2.35875 14.8575H15.2366C15.6673 14.8575 16 14.5034 16 14.1075C16 14.0161 15.9924 1.95133 15.9924 1.85999C15.9924 0.832489 15.145 0 14.0992 0C10.9925 0 5.26461 0 2.35875 0C1.09527 0 0 1.01606 0 2.31752V15.6825C0 17.0018 1.09511 18 2.35875 18H15.2366C15.6565 18 16 17.6625 16 17.25C16 16.8375 15.6565 16.5 15.2366 16.5ZM1.52672 2.31752C1.52672 1.875 1.9084 1.5 2.35875 1.5H3.06107V13.3575C2.581 13.387 2.17722 13.2774 1.52672 13.5075V2.31752ZM7.03054 6.05251C7.03054 5.65498 7.2519 5.28749 7.60306 5.09999C7.95418 4.90498 8.3893 4.92 8.73282 5.13748L10.916 6.5175C11.2366 6.71251 11.4274 7.05748 11.4274 7.43248C11.4274 7.80002 11.2366 8.14499 10.916 8.34L8.73282 9.72002C8.40993 9.93148 7.97028 9.95432 7.60306 9.75751C7.2519 9.57001 7.03054 9.20251 7.03054 8.80499V6.05251Z"
+                                    fill="currentColor"></path>
+                        </svg>
+                        <span class="icon-desc">7 دورة</span>
+                    </div>
+                    <div class="circle"></div>
+                    <div class="details">
+                        <svg width="1.2em" height="1.2em" viewBox="0 0 20 20" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M18.8311 13.584C18.9682 13.2882 19.3292 13.155 19.6374 13.2866C19.9456 13.4183 20.0842 13.7648 19.9471 14.0607C18.2751 17.6687 14.5369 20 10.4237 20C1.17199 19.9917 -3.48309 9.20456 3.05303 2.91705C6.54093 -0.555622 12.5887 -0.97881 16.5862 1.92241L16.4305 1.51841C16.3135 1.21472 16.475 0.877416 16.7914 0.765072C17.1079 0.652766 17.4591 0.807875 17.5761 1.11157L18.4272 3.32054C18.4976 3.50329 18.4689 3.70765 18.3505 3.86592C18.2323 4.02424 18.0389 4.11579 17.8368 4.11008L15.3845 4.04214C14.5761 3.98859 14.6087 2.87984 15.4197 2.86991L15.8845 2.88281C9.88647 -1.40915 1.18922 2.80103 1.22154 9.99289C1.35677 19.5068 14.6881 22.2177 18.8311 13.584ZM17.5318 9.40675H16.8315C16.0218 9.43744 16.0212 10.5485 16.8314 10.5794H17.5317C17.4032 12.0284 16.8029 13.35 15.8791 14.4019L15.3863 13.9288C15.1478 13.6998 14.7611 13.6998 14.5226 13.9287C14.2841 14.1577 14.284 14.529 14.5226 14.758L15.0154 15.2312C13.9197 16.118 12.5431 16.6943 11.0339 16.8177V16.1454C11.0019 15.368 9.84464 15.3674 9.81235 16.1454V16.8177C8.30305 16.6943 6.92649 16.118 5.83076 15.2312L6.3236 14.758C6.56212 14.529 6.56212 14.1577 6.3236 13.9288C6.08508 13.6998 5.69839 13.6998 5.45987 13.9288L4.96703 14.4019C4.04333 13.35 3.44304 12.0284 3.31445 10.5794H4.01478C4.82452 10.5488 4.82513 9.43775 4.01478 9.40675H3.31445C3.44304 7.95776 4.04333 6.63621 4.96707 5.58426L5.45987 6.05736C5.69839 6.28635 6.08508 6.28635 6.3236 6.05736C6.56212 5.82837 6.56212 5.4571 6.3236 5.22815L5.8308 4.75504C6.92653 3.86821 8.30313 3.2919 9.81239 3.16846V3.8408C9.84435 4.61819 11.0016 4.61877 11.0339 3.8408V3.16846C12.5431 3.2919 13.9197 3.86821 15.0155 4.75504L14.5227 5.22815C14.2842 5.45714 14.2842 5.82841 14.5227 6.05736C14.7612 6.28635 15.1479 6.28635 15.3864 6.05736L15.8792 5.58426C16.803 6.63621 17.4032 7.9578 17.5318 9.40675ZM11.6403 11.9909C11.8789 12.2199 12.2655 12.2199 12.5041 11.9909C12.7426 11.7619 12.7426 11.3906 12.504 11.1617L11.0339 9.75027V7.4132C11.0019 6.63582 9.84468 6.63523 9.81239 7.4132V9.99314C9.81239 10.1486 9.87676 10.2978 9.9913 10.4077L11.6403 11.9909Z"
+                                  fill="white" />
+                        </svg>
+
+                        <span class="icon-desc">50 ساعة</span>
+                    </div>
+                    <div class="circle"></div>
+
+                    <div class="details">
+                        <svg width="1.2em" height="1.2em" viewBox="0 0 20 20" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M3.29442 2.87744C3.69831 2.87323 4.08413 2.7198 4.36815 2.45044C4.65217 2.18108 4.81146 1.81753 4.81146 1.4387C4.81146 1.05987 4.65215 0.69633 4.36813 0.426978C4.0841 0.157625 3.69828 0.0041994 3.29439 0C2.8905 0.00420763 2.50467 0.157641 2.22065 0.427C1.93663 0.696358 1.77734 1.0599 1.77734 1.43874C1.77735 1.81757 1.93665 2.18111 2.22068 2.45046C2.5047 2.71981 2.89053 2.87324 3.29442 2.87744ZM6.07666 5.84551C6.07321 5.15551 5.77854 4.49486 5.2571 4.00809C4.73566 3.52132 4.02989 3.24805 3.29419 3.24805C2.55848 3.24805 1.85272 3.52132 1.33128 4.00809C0.809839 4.49486 0.515167 5.15551 0.511719 5.84551V6.47392H6.07666V5.84551ZM18.333 18.9571V15.8308H14.9997V18.9571H11.6664V11.1068H8.33317V18.9571H4.9999V7.49414H1.66663V18.9571H0V19.9992H19.9996V18.9571H18.333ZM17.7705 10.8941C17.4865 11.1635 17.1007 11.317 16.6968 11.3213C16.2929 11.317 15.907 11.1636 15.623 10.8942C15.339 10.6248 15.1797 10.2612 15.1797 9.88235C15.1797 9.50349 15.339 9.13991 15.623 8.87051C15.907 8.60112 16.2928 8.44763 16.6968 8.44336C17.1007 8.44762 17.4865 8.6011 17.7705 8.87049C18.0545 9.13989 18.2138 9.50346 18.2138 9.88232C18.2139 10.2612 18.0546 10.6247 17.7705 10.8941ZM19.4429 14.811V14.29C19.1812 10.5199 13.5034 11.0282 13.9051 14.811H19.4429ZM11.087 6.10509C10.8029 6.37449 10.4171 6.52797 10.0132 6.53224C9.60927 6.52798 9.22344 6.3745 8.93942 6.10511C8.6554 5.83571 8.4961 5.47214 8.49609 5.09328C8.49609 4.71443 8.65538 4.35085 8.93939 4.08145C9.22341 3.81205 9.60924 3.65857 10.0132 3.6543C10.4171 3.65856 10.8029 3.81204 11.0869 4.08143C11.371 4.35082 11.5303 4.7144 11.5303 5.09325C11.5303 5.47211 11.371 5.83569 11.087 6.10509ZM7.22325 10.099C6.87203 5.94769 13.1273 5.95778 12.7787 10.0909C12.6826 10.1011 9.88757 10.0998 8.2946 10.099C7.72038 10.0987 7.30235 10.0985 7.22325 10.099Z"
+                                  fill="currentColor"></path>
+                        </svg>
+                        <span class="icon-desc">مستوى مبتديء ومتوسط</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="price">
+                    <span class="old-price">35$</span>
+                    25$ /
+                    <span class="offer-text">مدى الحياة</span>
+                </p>
+                <button class="btn-offer">أشترك الآن</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
